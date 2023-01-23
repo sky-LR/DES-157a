@@ -1,0 +1,156 @@
+body{
+    max-width: 900px;
+    margin:auto;
+    padding:30px;
+    background-color: rgb(12, 12, 12);
+    color: rgb(236, 236, 236);
+    font-family: Helvetica;
+    letter-spacing: -0.05em;
+}
+
+header{
+    margin-top: 40px;
+}
+
+#name{
+    display: flex;
+}
+
+#S h1{
+    transition: 1s rotate;
+}
+
+#S:hover h1{
+    rotate: 360deg;
+}
+
+#L h1{
+    transition: 0.5s transform ease-in-out;
+    transform-origin: top;
+}
+
+#L:hover h1{
+    transform: scale(1,0);
+    transform-origin: bottom;
+}
+
+#R h1{
+    position: relative;
+    bottom: 0;
+}
+
+#R:hover h1{
+    animation: flip 0.5s ease-in forwards;
+}
+
+@keyframes flip{
+    0%{bottom:0; rotate: 0deg;}
+    50%{bottom:100px; rotate: 180deg;}
+    100%{bottom:0px; rotate: 360deg;}
+}
+
+#L2 h1{
+    transition: 0.5s transform ease-in-out;
+}
+
+#L2:hover h1{
+    transform: scale(1,3);
+}
+
+#R2 h1{
+    transition: 0.5s transform ease-in-out;
+}
+
+#R2:hover h1{
+    transform: scale(2,2);
+}
+
+#C h1{
+    transition: 0.5s color ease-in-out;
+}
+
+#C:hover h1{
+    color: crimson;
+}
+
+#E h1{
+    position: relative;
+    left: 0;
+    transition: 0.5s left ease-in-out;
+}
+
+#E:hover h1{
+    left: 1000px;
+}
+
+h1{
+    margin-block: 10px;
+    line-height: 120px;
+    font-family: p22-art-nouveau-bistro, sans-serif;
+    font-weight:unset;
+    font-size: 100pt;
+    font-style: normal;
+    color: rgb(236, 236, 236);
+}
+
+h2{
+    font-weight: bold;
+}
+
+#animation {
+    overflow: hidden; 
+}
+
+#slashes{
+    letter-spacing: 5px;
+    position: relative;
+    left: -10px;
+    animation: shift 0.5s linear infinite;
+}
+
+@keyframes shift{
+    from{left: -20px;}
+    to{left: 0px;}
+}
+
+main{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: stretch;
+}
+
+section{
+    margin-inline: 10px;
+    padding-inline: 15px ;
+    border: 1px solid rgb(236, 236, 236);
+    width: 300px;
+    height: 400px;
+} 
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+li{
+    padding:10px;
+    transition: 0.5s color ease-in-out;
+    transition: 0.5s background-color ease-in-out;
+    letter-spacing: -0.02em;
+}
+
+li:hover{
+    background-color: rgb(236, 236, 236);
+    color:black;
+}
+
+footer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+a{
+    color: crimson;
+    text-decoration: none;
+}
