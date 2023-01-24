@@ -1,7 +1,7 @@
 body{
     max-width: 900px;
     margin:auto;
-    padding:30px;
+    padding:20px;
     background-color: rgb(12, 12, 12);
     color: rgb(236, 236, 236);
     font-family: Helvetica;
@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 #name{
@@ -22,6 +22,33 @@ header{
 
 #S:hover h1{
     rotate: 360deg;
+}
+
+#K h1{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    rotate: 0deg;
+}
+
+#K:hover h1{
+    animation: kFall 1s linear forwards;
+}
+
+@keyframes kFall{
+    0%{top: 0;}
+    15%{top: 195px;right: 0px;}
+    35%{top: 170px; right: 120px;}
+    45%{top: 195px; right: 190px;}
+    100%{top: 800px; right: 300px; rotate: -180deg;}
+}
+
+#Y h1{
+    transition: 0.5s filter ease-in-out;
+}
+
+#Y:hover h1{
+    filter: blur(10px);
 }
 
 #L h1{
@@ -47,6 +74,20 @@ header{
     0%{bottom:0; rotate: 0deg;}
     50%{bottom:100px; rotate: 180deg;}
     100%{bottom:0px; rotate: 360deg;}
+}
+
+#O h1{
+    position: relative;
+    transform: scale(1,1);
+    right: 0;
+    bottom: 0;
+    transition: 0.5s transform ease-in-out, 0.5s right ease-in-out, 0.5s bottom ease-in-out;
+}
+
+#O:hover h1{
+    right: 200px;
+    bottom: 15px;
+    transform: scale(17,3);
 }
 
 #L2 h1{
@@ -87,7 +128,7 @@ h1{
     margin-block: 10px;
     line-height: 120px;
     font-family: p22-art-nouveau-bistro, sans-serif;
-    font-weight:unset;
+    font-weight: unset;
     font-size: 100pt;
     font-style: normal;
     color: rgb(236, 236, 236);
@@ -114,7 +155,7 @@ h2{
 }
 
 main{
-    padding-top: 50px;
+    padding-top: 20px;
     display: flex;
     justify-content: space-around;
     justify-items: stretch;
@@ -125,7 +166,6 @@ section{
     padding-inline: 15px ;
     border: 1px solid rgb(236, 236, 236);
     width: 300px;
-    height: 400px;
 } 
 
 ul{
@@ -135,14 +175,14 @@ ul{
 
 li{
     padding:10px;
-    transition: 0.5s color ease-in-out;
-    transition: 0.5s background-color ease-in-out;
+    transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out;
     letter-spacing: -0.02em;
 }
 
 li:hover{
     background-color: rgb(236, 236, 236);
     color:black;
+    cursor: pointer;
 }
 
 footer{
