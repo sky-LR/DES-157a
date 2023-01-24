@@ -37,8 +37,8 @@ header{
 
 @keyframes kFall{
     0%{top: 0;}
-    15%{top: 195px;right: 0px;}
-    35%{top: 170px; right: 120px;}
+    15%{top: 165px;right: 0px;}
+    35%{top: 140px; right: 120px;}
     45%{top: 195px; right: 190px;}
     100%{top: 800px; right: 300px; rotate: -180deg;}
 }
