@@ -17,18 +17,18 @@ header{
 }
 
 #S h1{
-    transition: 1s rotate;
+    transition: 1s transform;
 }
 
 #S:hover h1{
-    rotate: 360deg;
+    transform: rotate(360deg);
 }
 
 #K h1{
     position: relative;
     bottom: 0;
     right: 0;
-    rotate: 0deg;
+    transform: rotate(0deg);
 }
 
 #K:hover h1{
@@ -40,7 +40,7 @@ header{
     15%{top: 165px;right: 0px;}
     35%{top: 140px; right: 120px;}
     45%{top: 195px; right: 190px;}
-    100%{top: 800px; right: 300px; rotate: -180deg;}
+    100%{top: 800px; right: 300px; transform: rotate(-180deg);}
 }
 
 #Y h1{
@@ -71,12 +71,13 @@ header{
 }
 
 @keyframes flip{
-    0%{bottom:0; rotate: 0deg;}
-    50%{bottom:100px; rotate: 180deg;}
-    100%{bottom:0px; rotate: 360deg;}
+    0%{bottom:0; transform: rotate(0deg);}
+    50%{bottom:100px; transform: rotate(180deg);}
+    100%{bottom:0px; transform: rotate(360deg);}
 }
 
 #O h1{
+    z-index: -1;
     position: relative;
     transform: scale(1,1);
     right: 0;
@@ -173,29 +174,28 @@ ul{
     padding-left: 0;
 }
 
-li{
+li > a{
+    display: flex;
     padding:10px;
+    color: rgb(236, 236, 236);
+    text-decoration: none;
     transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out;
     letter-spacing: -0.02em;
 }
 
-li:hover{
+li:hover > a{
+    color: rgb(12, 12, 12);
     background-color: rgb(236, 236, 236);
-    color:black;
     cursor: pointer;
 }
 
-a{
-    color: rgb(236, 236, 236);
+#email{
+    color: crimson;
     text-decoration: none;
 }
 
-a:hover{
+#email:hover{
     color: rgb(236, 236, 236);
-}
-
-footer a{
-    color: crimson;
     text-decoration: none;
 }
 
