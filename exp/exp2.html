@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experiment 2</title>
+
+
+    <style>
+        div{
+            height:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Experiment 2</h1>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        //  This script asks the user to input a color of the rainbow. It then colors the available divs using colorDivs() according to the "divColor" array. checkColors() checks wether the div that colorDivs() is coloring is the same as what the user entered and if so, it labels it as such.
+
+        var divColor = ['red','orange','yellow','green','blue','purple'];
+
+        var userColor = prompt("pick a color of the rainbow","");
+        userColor = userColor.toLowerCase();
+
+        function colorDivs(){
+            var divList = document.querySelectorAll("div");
+            for(var i = 0; i < divColor.length; i++){
+                divList[i].style.backgroundColor = divColor[i];
+                checkColors(i);
+            }
+        }
+
+        function checkColors(inc){
+            var currentDiv = document.querySelectorAll("div");
+            if (userColor == divColor[inc]){
+                currentDiv[inc].innerHTML = "<p>This is your color</>";
+            } 
+        }
+
+        if (userColor == "null" || userColor == ""){
+            alert('please enter a color of the rainbow')
+        } else {
+            colorDivs();
+        }
+
+    </script>
+</body>
+</html> 
