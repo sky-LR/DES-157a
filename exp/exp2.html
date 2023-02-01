@@ -28,7 +28,11 @@
         var divColor = ['red','orange','yellow','green','blue','purple'];
 
         var userColor = prompt("pick a color of the rainbow","");
-        userColor = userColor.toLowerCase();
+        
+        function returnLowerCase(input){
+            output = input.toLowerCase();
+            return output;
+        }
 
         function colorDivs(){
             var divList = document.querySelectorAll("div");
@@ -40,10 +44,11 @@
 
         function checkColors(inc){
             var currentDiv = document.querySelectorAll("div");
-            if (userColor == divColor[inc]){
+            if (returnLowerCase(userColor) == divColor[inc]){
                 currentDiv[inc].innerHTML = "<p>This is your color</>";
             } 
         }
+
 
         if (userColor == "null" || userColor == ""){
             alert('please enter a color of the rainbow')
