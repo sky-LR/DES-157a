@@ -1,0 +1,161 @@
+body{
+    max-width: 1000px;
+    margin: auto;
+    padding-inline: 40px;
+    background-color: rgb(23, 23, 23);
+    color: rgb(245, 245, 245);
+}
+
+header{
+    position: absolute;
+    top: 40px;
+    width: 300px;
+}
+
+h1{
+    font-family: "quiche-display", sans-serif;
+    font-size: 90pt;
+    line-height: 75pt;
+}
+
+h2{
+    position: absolute;
+    top:0px;
+    left: -90px;
+    transform: rotate(-30deg);
+    font-family: Helvetica, sans-serif;
+    font-size: 36pt;
+    background-color: #4F36E0;
+    border-radius: 10px;
+    padding-inline: 20px;
+    padding-block: 15px;
+}
+
+main{
+    padding-top: 200px;
+    font-family: Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+form{
+    grid-column: 2;
+    justify-self: center;
+    width: 225px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    column-gap: 100px;
+    padding: 50px;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+
+form *{
+    position: relative;
+    right: 0;
+    transition: right 0.5s ease-in-out;
+}
+
+form:hover *{
+    right: 160px;
+}
+
+input{
+    display: block;
+    justify-self: center;
+    border: none;
+    height: 25px;
+    width: 200px;
+    border-radius: 3px;
+    padding-inline: 10px;
+    margin-block: 10px;
+    background-color: rgb(245, 245, 245);
+}
+
+input:focus{
+    box-shadow: 0 0 10px 5px #4F36E0;
+}
+
+button{
+    background: none;
+    border: solid 1px;
+    border-radius: 3px;
+    color: #4F36E0;
+
+}
+
+input[type="submit"]{
+    width: 220px;
+    height: 50px;
+    margin-top: 40px;
+    background-color: #4F36E0;
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+}
+
+input[type="submit"]:hover{
+    background-color: #6951ec;
+    box-shadow: 0 0 60px 10px #4F36E0;
+}
+
+#reading{
+    display: none;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    opacity: 0%;
+    margin-inline: 90px;
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+    line-height: 36px;
+}
+
+#ball{
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    border: solid 5px #4d35d1;
+    background:radial-gradient(rgb(67, 123, 255),#4F36E0, rgb(130, 0, 165),rgb(124, 0, 120));
+    animation: gradScale 4s ease-in-out infinite;
+    transition: transform 1s ease-in-out;
+    box-shadow: 0 0 600px 40px #4F36E0;
+}
+
+#ball:hover{
+    /* position: absolute; */
+    justify-self: center;
+    transform: scale(800%) translate(0%,0%);
+}
+
+#ball:hover ~ #ballHolder{
+    opacity: 0%;
+
+}
+
+#ball:hover ~ #reading{
+    display: block;
+    z-index: 2;
+    opacity: 100%;
+}
+
+#ballHolder{
+    position: relative;
+    top: -150px;
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 2;
+    justify-self: center;
+    width: 400px;
+    transition: opacity 0.5s ease-in;
+}
+
+@keyframes gradScale{
+    0%{background-size: 100% 100%; background-position: 50% 50%;}
+    50%{background-size: 150% 150%; background-position: 50% 50%;}
+    100%{background-size: 100% 100%; background-position: 50% 50%;}
+}
