@@ -129,7 +129,7 @@ input[type="submit"]:hover{
 #ball:hover{
     /* position: absolute; */
     justify-self: center;
-    transform: scale(800%) translate(0%,0%);
+    transform: scale(8) translate(0%,0%);
 }
 
 #ball:hover ~ #ballHolder{
