@@ -3,7 +3,7 @@ body{
     margin: auto;
     padding-inline: 40px;
     background-color: rgb(23, 23, 23);
-    color: rgb(245, 245, 245);
+    color: #e2e0ec;
 }
 
 header{
@@ -14,6 +14,8 @@ header{
 
 h1{
     font-family: "quiche-display", sans-serif;
+    font-weight: 800;
+    font-style: italic;
     font-size: 90pt;
     line-height: 75pt;
 }
@@ -48,18 +50,22 @@ form{
     grid-template-columns: 220px 220px;
     column-gap: 100px;
     padding: 50px;
-    border: solid 1px white;
+    border: solid 1px #beb1ff;
     border-radius: 10px;
 }
 
-form *{
+form section{
     position: relative;
-    right: 0;
+    right: 0px;
     transition: right 0.5s ease-in-out;
 }
 
-form:hover *{
-    right: 160px;
+.part1{
+    right: 0px;
+}
+
+.part2{
+    right: 320px;
 }
 
 input{
@@ -71,7 +77,7 @@ input{
     border-radius: 3px;
     padding-inline: 10px;
     margin-block: 10px;
-    background-color: rgb(245, 245, 245);
+    background-color: #beb1ff;
 }
 
 input:focus{
@@ -79,6 +85,9 @@ input:focus{
 }
 
 button{
+    width: 220px;
+    height: 30px;
+    margin-block: 10px;
     background: none;
     border: solid 1px;
     border-radius: 3px;
@@ -86,33 +95,63 @@ button{
 
 }
 
+button:hover{
+    cursor: pointer;
+    background-color: #231f3a;
+    box-shadow: 0 0 10px 3px #4F36E0;
+}
+
 input[type="submit"]{
     width: 220px;
     height: 50px;
-    margin-top: 40px;
+    margin-top: 10px;
+    font-family: "quiche-display", sans-serif;
+    font-weight: 300;
     background-color: #4F36E0;
     color: rgb(245, 245, 245);
     font-size: 20px;
 }
 
 input[type="submit"]:hover{
+    cursor: pointer;
     background-color: #6951ec;
     box-shadow: 0 0 60px 10px #4F36E0;
 }
 
 #reading{
-    display: none;
     position: absolute;
     align-self: center;
     justify-self: center;
-    opacity: 0%;
-    margin-inline: 90px;
+    top: 15%;
+    z-index: 2;
+    margin-inline: 200px;
+    font-family: "quiche-display", sans-serif;
+    font-weight: 300;
+    font-size: 32px;
     color: rgb(245, 245, 245);
-    font-size: 20px;
-    line-height: 36px;
+    line-height: 48px;
+    transition: opacity 3s ease-in-out 1s;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+.showing{
+    visibility: visible;
+    opacity: 1;
+}
+
+#ball, #shine{
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    top:0;
+    left:0;
 }
 
 #ball{
+    position: relative;
     justify-self: center;
     align-self: center;
     z-index: 1;
@@ -123,24 +162,24 @@ input[type="submit"]:hover{
     background:radial-gradient(rgb(67, 123, 255),#4F36E0, rgb(130, 0, 165),rgb(124, 0, 120));
     animation: gradScale 4s ease-in-out infinite;
     transition: transform 1s ease-in-out;
-    box-shadow: 0 0 600px 40px #4F36E0;
+    box-shadow: 0 0 600px 40px rgb(79, 54, 224);
 }
 
-#ball:hover{
-    /* position: absolute; */
+.readingMode{
     justify-self: center;
     transform: scale(8) translate(0%,0%);
 }
 
-#ball:hover ~ #ballHolder{
-    opacity: 0%;
-
+.normalMode{
+    justify-self: center;
+    transform: scale(1) translate(0%,0%);
 }
 
-#ball:hover ~ #reading{
-    display: block;
-    z-index: 2;
-    opacity: 100%;
+#shine{
+    position:absolute;
+    background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.2),rgba(255,255,255,0));
+    transform: rotate(30deg) scale(93%);
+    mix-blend-mode: screen;
 }
 
 #ballHolder{
