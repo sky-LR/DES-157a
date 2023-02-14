@@ -1,5 +1,5 @@
 (function(){
-    
+
     "use strict";
 
     console.log("reading JS");
@@ -44,12 +44,12 @@
         console.log(madlibOutput);
 
         if(color1 && color2 && time1 && ad1 && item1 && time2 && time3 && place && mus && item2 && insult){
-        reading.innerHTML = `${madlibOutput} <button type="button" id="readAgain" value="Read Me Again!"></button>`;
+        reading.innerHTML = `${madlibOutput}`;
         reading.className = 'showing';
         orb.className = 'readingMode';
         ballHolder.className = 'hidden';
         } else{
-            alert('Please fill out all parts of the form so I can read you!')
+            alert('Please fill out all parts of the form so I can read you!');
         }
 
     })
