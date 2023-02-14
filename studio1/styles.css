@@ -1,14 +1,14 @@
 body{
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     padding-inline: 40px;
     background-color: rgb(23, 23, 23);
-    color: #e2e0ec;
+    color: #beb1ff;
 }
 
 header{
     position: absolute;
-    top: 40px;
+    top: 10px;
     width: 300px;
 }
 
@@ -34,7 +34,7 @@ h2{
 }
 
 main{
-    padding-top: 200px;
+    padding-top: 160px;
     font-family: Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -42,6 +42,8 @@ main{
 }
 
 form{
+    position: relative;
+    top: -50px;
     grid-column: 2;
     justify-self: center;
     width: 225px;
@@ -99,6 +101,16 @@ button:hover{
     cursor: pointer;
     background-color: #231f3a;
     box-shadow: 0 0 10px 3px #4F36E0;
+}
+
+#readAgain{
+    color: rgb(245, 245, 245);
+}
+
+#readAgain:hover{
+    cursor: pointer;
+    background-color: #8b7be3;
+    box-shadow: 0 0 10px 3px #ffffff;
 }
 
 input[type="submit"]{
@@ -184,13 +196,22 @@ input[type="submit"]:hover{
 
 #ballHolder{
     position: relative;
-    top: -150px;
+    top: -190px;
     grid-column: 1;
     grid-row: 2;
     z-index: 2;
     justify-self: center;
     width: 400px;
     transition: opacity 0.5s ease-in;
+}
+
+#stars{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 10%;
+    width: 1100px;
 }
 
 @keyframes gradScale{
