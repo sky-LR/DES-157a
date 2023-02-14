@@ -1,5 +1,7 @@
 (function(){
+    
     "use strict";
+
     console.log("reading JS");
 
     const formRef = document.querySelector('form');
