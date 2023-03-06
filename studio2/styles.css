@@ -158,14 +158,6 @@ img{
     transform: rotate(288deg);
 }
 
-.hidden{
-    /* visibility: hidden; */
-}
-
-.visible{
-    visibility: visible;
-}
-
 .defaultPos{
     transform: scale(1) rotate(0);
 }

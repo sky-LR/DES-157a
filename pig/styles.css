@@ -1,0 +1,60 @@
+@font-face{
+    font-family: pixelPokemon;
+    src: url(fonts/Pokemon\ Classic.ttf)
+}
+
+body {
+    font-family: pixelPokemon;
+    color: #333;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+#canvas{
+    margin:auto;
+    image-rendering: pixelated;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 640px;
+    background-size: cover;
+}
+
+button { 
+    padding: 10px;
+    border: solid #333 10px;
+}
+
+div {
+    /* padding: 20px; */
+}
+
+img{
+    image-rendering: pixelated;
+}
+
+.die1{
+    position: relative;
+    top: 312px;
+    left: 360px;
+    width: 140px;
+}
+
+.die2{
+    position: relative;
+    top: 312px;
+    left: 364px;
+    width: 140px;
+}
+
+#gamecontrol, #score {
+    
+}
+
+#game {
+    
+}
+
+#actions {
+    
+}
