@@ -1,0 +1,60 @@
+/* Carbon Thin
+font-family: "t26-carbon", monospace;
+font-weight: 100;
+font-style: normal;
+
+Carbon ThinItalic
+font-family: "t26-carbon", monospace;
+font-weight: 100;
+font-style: italic;
+
+Carbon Regular
+font-family: "t26-carbon", monospace;
+font-weight: 400;
+font-style: normal;
+
+Carbon RegularItalic
+font-family: "t26-carbon", monospace;
+font-weight: 400;
+font-style: italic;
+
+Carbon Bold
+font-family: "t26-carbon", monospace;
+font-weight: 700;
+font-style: normal;
+
+Carbon BoldItalic
+font-family: "t26-carbon", monospace;
+font-weight: 700;
+font-style: italic; */
+
+body{
+    font-family: "t26-carbon", monospace;
+    color: rgb(39, 39, 39);
+    background-color: rgb(39, 39, 39);
+}
+
+h1{
+    background-color: rgb(234, 255, 0);
+    font-weight: 700;
+    font-size: 48pt;
+    line-height: 36pt;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#container{
+    max-width: 850px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+p{
+    max-width: 600px;
+    font-weight: 400;
+    font-size: 14pt;
+    line-height: 30pt;
+}
