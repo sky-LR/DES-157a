@@ -28,7 +28,7 @@ h2{
 #canvas{
     position: relative;
     left: 50%;
-    transform: translate(-50%,15%);
+    transform: translate(-50%,8%);
     image-rendering: pixelated;
     background-image: url(images/bg.png);
     background-repeat: no-repeat;
