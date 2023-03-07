@@ -1,0 +1,150 @@
+@font-face{
+    font-family: pixelPokemon;
+    src: url(fonts/Pokemon\ Classic.ttf)
+}
+
+body {
+    font-family: pixelPokemon;
+    color: rgb(22, 22, 22);
+    padding: 0;
+    background-color: rgb(22, 22, 22);;
+    line-height: 1.5em;
+}
+
+button { 
+    padding: 10px;
+    background-color: #f7f6f7;
+    border: solid rgb(22, 22, 22) 10px;
+}
+
+img{
+    image-rendering: pixelated;
+}
+
+h2{
+    background-color: #f7f6f7;
+}
+
+#canvas{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,15%);
+    image-rendering: pixelated;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 640px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#rules{
+    position: absolute;
+    margin: 50px;
+    padding: 50px;
+    background-color: #f7f6f7;
+
+}
+
+#quit{
+    position: absolute;
+    border: none;
+    right:0;
+    bottom:0;
+}
+
+#gamecontrol{
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translate(-50%,0);
+
+}
+
+#player1{
+    position: absolute;
+    top: 130px;
+    left: 270px;
+    image-rendering: pixelated;
+    background-image: url(images/player1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    width: 210px;
+    height: 310px;
+}
+
+#player2{
+    position: absolute;
+    top: 130px;
+    left: 520px;
+    image-rendering: pixelated;
+    background-image: url(images/player2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    width: 210px;
+    height: 310px;
+}
+
+#game {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    padding: 10px;
+    background-color: #f7f6f7;
+    border: solid rgb(22, 22, 22) 10px;
+    width: 200px;
+}
+
+#actions {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%,0);
+}
+
+#score{
+    position: absolute;
+    left: 50%;
+    top: 420px;
+    transform: translate(-50%,0);
+}
+
+#player1Health{
+    position: absolute;
+    left: 10px;
+    top: 550px; 
+    height: 20px;
+    background-color: rgb(255, 220, 220);
+}
+
+#player2Health{
+    position: absolute;
+    right: 10px;
+    top: 550px; 
+    height: 20px;
+    background-color: rgb(255, 220, 220);
+}
+
+.die1{
+    position: absolute;
+    top: 430px;
+    left: 320px;
+    width: 140px;
+}
+
+.die2{
+    position: absolute;
+    top: 430px;
+    left: 500px;
+    width: 140px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
