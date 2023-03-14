@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/lel8lje.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Sky LaRoche Every Picture</title>
+</head>
+<body>
+    <div id="shadow"></div>
+    <div id="testingOverlay">
+        <h2>Hello Tester!</h2>
+        <p>
+            Here are the 3 tasks I would like you to complete: 
+            <br><br>
+            1. Navigate to the end of the page and back
+            <br><br>
+            2. Find the Monotron section
+            <br><br>
+            3. Play the sound of the toy piano
+         </p>
+         <button type="button" id="closeOverlay">Lets Go!</button>
+    </div>
+    
+    <header class="showing">
+        <h1>An Inventory Of My Instruments and Their Sounds </h1>
+        <h2>Sky LaRoche - DES 157a - Winter 2023 - Every Picture Project</h2>
+    </header>
+
+    <div id="allPics" class="defaultPos">
+        <div id="instrument1" class="pics">
+            <img src="images/instrument-1-halftone.avif" class="halftone1" alt="instrument-1-halftone.avif">
+            <img src="images/instrument-1-halftone.avif" class="halftone2" alt="instrument-1-halftone.avif">
+            <img src="images/instrument-1.avif" alt="instrument-1.avif">
+        </div>
+        <div id="instrument2" class="pics">
+            <img src="images/instrument-2-halftone.avif" class="halftone1" alt="instrument-2-halftone.avif">
+            <img src="images/instrument-2-halftone.avif" class="halftone2" alt="instrument-2-halftone.avif">
+            <img src="images/instrument-2.avif" alt="instrument-2.avif">
+        </div>
+        <div id="instrument3" class="pics">
+            <img src="images/instrument-3-halftone.avif" class="halftone1" alt="instrument-3-halftone.avif">
+            <img src="images/instrument-3-halftone.avif" class="halftone2" alt="instrument-3-halftone.avif">
+            <img src="images/instrument-3.avif" alt="instrument-3.avif">
+        </div>
+        <div id="instrument4" class="pics">
+            <img src="images/instrument-4-halftone.avif" class="halftone1" alt="instrument-4-halftone.avif">
+            <img src="images/instrument-4-halftone.avif" class="halftone2" alt="instrument-4-halftone.avif"> 
+            <img src="images/instrument-4.avif" alt="instrument-4.avif">   
+        </div>
+        <div id="instrument5" class="pics">
+            <img src="images/instrument-5-halftone.avif" class="halftone1" alt="instrument-5-halftone.avif"> 
+            <img src="images/instrument-5-halftone.avif" class="halftone2" alt="instrument-5-halftone.avif">
+            <img src="images/instrument-5.avif" alt="instrument-5.avif">
+        </div>
+    </div>
+
+    <main class="hidden">
+
+        <section id="steinberger">
+            <h3 class="sectionTitle">The Steinberger</h3>
+            <h4 class="sectionTitle">Headless Horseman</h4>
+            <time class="sectionTitle">2014</time>
+
+            <hr>
+
+            <div class="vLine"></div>
+
+            <p>This is my Steinbereger headless bass. It was given to me by my great aunt when I was about 13, which was far to young for me to actually appreciate it. As I’ve gotten older I realized that it was a symbol of my family's support for me pursuing music, which is something I’m eternally grateful for. It went from a weird instrument I never played to my favorite in my collection. I hope to give it to my great nephew someday.</p>
+            <div class="buttonBG">
+                <button type="button" id="steinbergerPlay">Click Me To Play Sound</button>
+            </div>
+        </section>
+
+        <section id="toyPiano">
+            <h3 class="sectionTitle">The Toy Piano</h3>
+            <h4 class="sectionTitle">Big Kid's Playtime</h4>
+            <time class="sectionTitle">2022</time>
+            <hr>
+            <div class="vLine"></div>
+
+            <p>This is a children’s toy piano I picked up last year at a goodwill for $1.50. I brought it home and immediately launched into the weirdest, funniest jam session I’ve ever been a part of with my roommates. It’s a dinky little machine but it’s now a staple in my collection. Music doesn’t have to be so serious, sometimes the best stuff happens when you just play.</p>
+            <div class="buttonBG">
+                <button type="button" id="toyPianoPlay">Click Me To Play Sound</button>
+            </div>
+        </section>
+
+        <section id="lesPaul">
+            <h3 class="sectionTitle">The Les Paul</h3>
+            <h4 class="sectionTitle">Daily Driver</h4>
+            <time class="sectionTitle">2020</time>
+            <hr>
+            <div class="vLine"></div>
+
+            <p>This is my Epihpone Les Paul guitar. It feels incredible to play. That’s really what I have to say about it. Playing this guitar is like taking a bite of a nice crunchy grape, or popping bubble wrap, or feeling a piece of sea glass between your fingers. I love having this instrument around because I <em>want</em> to play it. It keeps me playing music and that makes my life better. </p>
+            <div class="buttonBG">
+                <button type="button" id="lesPaulPlay">Click Me To Play Sound</button>
+            </div>
+        </section>
+
+        <section id="monotron">
+            <h3 class="sectionTitle">The Monotron</h3>
+            <h4 class="sectionTitle">Squeaky Little Guy</h4>
+            <time class="sectionTitle">2016</time>
+
+            <hr>
+
+            <div class="vLine"></div>
+
+            <p>This is my Korg Monotron pocket synthesizer which I bought when I was 14. It’s possibly the smallest, cheapest synth you could possibly get, but to me at that age it seemed like a massive purchase. For several months I eyed this synth every time I would go to the music store for my bass lesson until I finally saved enough to buy it. Every time I hold the little thing in my hand and hear its squeaky, pre-pubescent sounds I’m reminded of how far I’ve come.</p>
+            <div class="buttonBG">
+                <button type="button" id="monotronPlay">Click Me To Play Sound</button>
+            </div>
+            
+        </section>
+
+        <section id="recordingKing">
+            <h3 class="sectionTitle">Recording King</h3>
+            <h4 class="sectionTitle">Strum Away</h4>
+            <time class="sectionTitle">2019</time>
+
+            <hr>
+
+            <div class="vLine"></div>
+
+            <p>This is my one and only acoustic instrument. It’s a Recording King guitar which was gifted to me by my dad and his landlord, Larry. As a music producer, almost all the time I spend making music is on the computer. Recording and editing music takes up massive amounts of time so it’s nice to have portable, non-electronic music I can bring outside, play with friends, or just use to get off my computer now and again. </p>
+            <div class="buttonBG">
+                <button type="button" id="recordingKingPlay">Click Me To Play Sound</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
