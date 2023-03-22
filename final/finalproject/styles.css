@@ -1,0 +1,312 @@
+:root{
+    --darkColor: rgb(21, 21, 21);
+}
+
+body{
+    font-family: "articulat-cf", sans-serif;
+}
+
+main{
+    min-width: 875px;
+}
+
+/* USER TESTING */
+/* #testingOverlay{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+}
+
+#shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,50%);
+    z-index: 3;
+} */
+
+header{
+    height: 105vh;
+}
+
+#scrollReminder{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    height: 150px;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0)0%, rgba(0, 0, 0, 0.04)20%, rgba(0, 0, 0, 0.16)40%, rgba(0, 0, 0, 0.36)60%, rgba(0, 0, 0, 0.64)80%, rgba(0, 0, 0, 1)100%);
+    transition: opacity 1s ease-in;
+    
+}
+
+#scrollReminder p{
+    background-color:rgba(255, 208, 0, 100);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    animation: levitate 1s ease-in-out infinite;
+}
+
+h1{
+    margin: 0;
+    font-size: 32pt;
+    line-height: 32pt;
+    padding-left: 25px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: var(--darkColor);
+}
+
+h2{
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 15px;
+    font-size: 20pt;
+    font-weight: 100;
+    color: var(--darkColor);
+    background-color: white;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 5fr 3fr 1fr;
+    grid-auto-rows: min-content;
+    column-gap: 0px;
+    height: 105vh;
+    min-height: 300px;
+    /* margin-block: 500px; */
+}
+
+.sectionTitle{
+    align-self: end;
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+
+h3{
+    grid-column: 1;
+    margin: 0;
+    font-size: 32pt;
+    padding-left: 25px;
+    color: white;
+    background-color: var(--darkColor);
+    transition: transform 0.3s ease-in-out;
+    transform: translate(-100%,0);
+    
+}
+
+h4{
+    grid-column: 2;
+    font-size: 20pt;
+    line-height: 36pt;
+    font-weight: 100;
+    margin: 0;
+    padding-inline: 25px ;
+    color: var(--darkColor);
+    background-color: white;
+}
+
+time{
+    grid-column: 3;
+    padding-inline: 25px;
+    font-size: 20pt;
+    line-height: 36pt;
+    font-weight: 100;
+    border-style: none none none solid;
+    border-width: 1px;
+    border-color: var(--darkColor);
+    color: var(--darkColor);
+    background-color: white;
+}
+
+hr{
+    grid-column: 2/4;
+    margin: -1px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--darkColor);
+}
+
+.vLine{
+    border-style: none solid none none;
+    border-width: 1px;
+    border-color: var(--darkColor);
+    grid-row: 3/5;
+}
+
+p{
+    grid-column: 2/4;
+    margin: 0;
+    padding: 50px;
+    font-size: 12pt;
+    line-height: 20pt;
+    color: var(--darkColor);
+    background-color: white;
+}
+
+button{
+    grid-column: 2;
+    margin-top: 25px;
+    margin-left: 50px;
+    width: 200px;
+    height: 50px;
+    font-size: 12pt;
+    color: var(--darkColor);
+    background-color: rgb(255, 208, 0);
+    border: none;
+    transform: scale(1);
+    transition: transform 200ms;
+}
+
+button:hover{
+    background-color: rgb(255, 225, 89);
+    cursor: pointer;
+    transform: scale(0.9);
+    /* animation: rainbowFlash 1s ease-in-out 1 infinite; */
+}
+
+.buttonBG{
+    grid-column: 2/4;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+#allPics{
+    z-index: -1;
+    position: fixed;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transition: transform 1s ease-in-out;
+}
+
+img{
+    position: absolute;
+    width: 500px;
+    margin-left:100px;
+    transform-origin: left 50%;
+    transform: translate(0,-50%);
+}
+
+#instrument1{
+    transform: rotate(0deg);
+}
+
+#instrument2{
+    transform: rotate(72deg);
+}
+
+#instrument3{
+    transform: rotate(144deg);
+}
+
+#instrument4{
+    transform: rotate(216deg);
+}
+
+#instrument5{
+    transform: rotate(288deg);
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing{
+    visibility: visible;
+    opacity: 100;
+}
+
+.h3OffScreen{
+    transform: translate(-100vw,0vw);
+}
+
+.defaultPos{
+    transform: scale(1) rotate(0);
+}
+
+.pic1{
+    transform: translate(-900px,200px) scale(2.5) rotate(0);
+}
+
+.pic2{
+    transform: translate(-900px,200px) scale(2.5) rotate(-72deg);
+}
+
+.pic3{
+    transform: translate(-900px,200px) scale(2.5) rotate(-144deg);
+}
+
+.pic4{
+    transform: translate(-900px,200px) scale(2.5) rotate(-216deg);
+}
+
+.pic5{
+    transform: translate(-900px,200px) scale(2.5) rotate(-288deg);
+}
+
+.halftone1{
+    visibility: hidden;
+    transform: translate(-20px, -105px) scale(1.2) rotate(0);
+}
+
+.halftone2{
+    visibility: hidden;
+    transform: translate(-20px, -105px) scale(1.21) rotate(1deg);
+    mix-blend-mode: difference;
+    animation: wiggle 3s ease-in-out infinite;
+
+}
+
+.rainbowFlashAnimation{
+    animation: rainbowFlash 1s ease-in-out;
+}
+
+.jitter{
+    animation: jitter 0.3s step-start infinite;
+}
+
+@keyframes wiggle{
+    0%{transform: translate(-20px, -105px) scale(1.21) rotate(-1deg);}
+    50%{transform: translate(-25px, -105px) scale(1.26) rotate(1deg);}
+    100%{transform: translate(-20px, -105px) scale(1.21) rotate(-1deg);}
+}
+
+@keyframes rainbowFlash{
+    0%{background-color: rgb(255, 208, 0); transform: scale(0.9);}
+    10%{background-color: rgb(239, 93, 217); transform: scale(0.8);}
+    20%{background-color: rgb(125, 189, 228); transform: scale(1.07);}
+    30%{background-color: rgb(112, 225, 77); transform: scale(1);}
+    40%{background-color: rgb(255, 230, 248);}
+    50%{background-color: rgb(232, 223, 59);}
+    60%{background-color: rgb(60, 209, 90);}
+    70%{background-color: rgb(108, 72, 223);}
+    80%{background-color: rgb(255, 247, 242);}
+    90%{background-color: rgb(232, 101, 75);}
+    100%{background-color: rgb(255, 208, 0);transform: scale(1);}
+}
+
+@keyframes levitate{
+    0%{transform: translate(-50%,-50%)}
+    50%{transform: translate(-50%,-70%)}
+    100%{transform: translate(-50%,-50%)}
+}
+
+@keyframes jitter{
+    0%{transform: translate(-25px, -115px) scale(1.20)}
+    20%{transform: translate(-15px, -95px) scale(1.20)}
+    40%{transform: translate(-25px, -110px) scale(1.20)}
+    60%{transform: translate(-15px, -105px) scale(1.20)}
+    80%{transform: translate(-30px, -100px) scale(1.20)}
+    100%{transform: translate(-25px, -115px) scale(1.20)}
+}
