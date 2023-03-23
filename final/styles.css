@@ -52,9 +52,15 @@ h1{
     border-radius: 5px;
 }
 
-p{
+p, ol {
     max-width: 600px;
     font-weight: 400;
     font-size: 14pt;
     line-height: 30pt;
+}
+
+img{
+    width: 250px;
+    margin: 10px;
+    border-radius: 5px;
 }

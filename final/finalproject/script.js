@@ -7,7 +7,6 @@
     const headerHeight = 400;
     const allPics = document.querySelector('#allPics');
     const buttons = document.querySelectorAll('button');
-    const sections = document.querySelectorAll('section');
     const scrollReminder = document.querySelector('#scrollReminder');
     const sectionH3 = document.querySelectorAll('h3');
     let reminderTimer;
@@ -36,12 +35,6 @@
             behavior: 'smooth'
         });
     };
-
-    //Sets the clasname for the h3s
-    // for(let i=0; i<sectionH3.length; i++){
-    //     sectionH3[i].className = 'h3OffScreen'
-    // }
-
 
     //Things to be run once the window loads
     window.addEventListener('load',function(){
